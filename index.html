@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comics</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<!-- Header -->
+<div id="header"></div>
+
+<div class="topbar">
+  <h1>Comics</h1>
+  <div class="topbar-controls">
+    <input type="search" id="searchInput" placeholder="Buscar por titulo o numero..." autocomplete="off">
+    <span id="counter" class="counter"></span>
+    <button id="resetProgressBtn" class="reset-btn" title="Borra el progreso de lectura guardado en este navegador">Reiniciar progreso</button>
+  </div>
+</div>
+
+<nav id="categoryNav" class="category-nav"></nav>
+
+<div id="categoryBanner" class="category-banner hidden">
+  <div id="categoryBannerBg" class="category-banner-bg"></div>
+  <div class="category-banner-overlay"></div>
+  <div class="category-banner-content">
+    <h2 id="categoryBannerTitle" class="category-banner-title"></h2>
+    <span id="categoryBannerYears" class="category-banner-years"></span>
+    <p id="categoryBannerSynopsis" class="category-banner-synopsis"></p>
+  </div>
+</div>
+
+<main>
+  <div id="status" class="status"></div>
+  <div id="grid" class="grid"></div>
+</main>
+
+<!-- Modal lector -->
+<div id="reader" class="reader hidden">
+  <div class="reader-topbar">
+    <span id="readerTitle" class="reader-title"></span>
+    <span id="readerPageInfo" class="reader-page-info"></span>
+    <button id="readerClose" class="reader-close" title="Cerrar (Esc)">✕</button>
+  </div>
+  <div class="reader-body">
+    <button id="readerPrev" class="reader-nav reader-prev" title="Anterior (←)">‹</button>
+    <div class="reader-page-container">
+      <img id="readerImage" class="reader-image" alt="Pagina del comic">
+      <div id="readerLoading" class="reader-loading hidden">Cargando pagina...</div>
+    </div>
+    <button id="readerNext" class="reader-nav reader-next" title="Siguiente (→)">›</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<script src="./js/loader.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
